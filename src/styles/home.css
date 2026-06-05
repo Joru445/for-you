@@ -1,0 +1,90 @@
+.countdown {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.countdown img, .special-date {
+  width: 100%;
+}
+
+.timer {
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.time-box {
+  min-width: clamp(50px, 2vw, 100px);
+
+  padding: 1rem;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.1);
+
+  text-align: center;
+}
+
+.time-box span {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: bold;
+}
+
+.anniversary-popup {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  backdrop-filter: blur(6px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s ease;
+
+  z-index: 9999;
+}
+
+.anniversary-popup.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 2rem;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  transform: scale(0.8);
+
+  transition: 0.3s ease;
+}
+
+.popup-content h1 {
+  color: #fff;
+}
+
+.anniversary-popup.show .popup-content {
+  transform: scale(1);
+}

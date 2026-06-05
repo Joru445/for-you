@@ -1,0 +1,21 @@
+.letter-content {
+  padding: clamp(2rem, 2vw, 4rem);
+}
+
+.letter {
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+
+  line-height: 1.8;
+
+  text-align: justify;
+
+  max-width: 70ch;
+
+  margin: 0 auto 1rem;
+}
+
+.indent {
+  text-indent: 2rem;
+}
