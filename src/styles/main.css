@@ -1,5 +1,4 @@
 body {
-  background-color: #fff;
 
   display: flex;
 
@@ -68,7 +67,7 @@ header nav a {
 }
 
 #content {
-  background-color: #fafafa;
+  background-color: #fff;
 
   flex: 1;
 
