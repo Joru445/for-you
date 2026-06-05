@@ -37,6 +37,6 @@ document.addEventListener("click", (e) => {
     navigateTo(link.getAttribute("href"));
 });
 
-window.addEventListener("popstate", router);
+window.addEventListener("hashchange", router);
 
 renderLayout();

@@ -4,7 +4,7 @@ let countdownInterval;
 
 export function HomePage() {
 
-  loadCSS("/src/styles/home.css");
+  loadCSS("./src/styles/home.css");
 
   return `
 
@@ -130,11 +130,26 @@ export function initHomePage() {
       (difference / 1000) % 60
     );
 
-    
-    document.querySelector("#days").textContent = days;
-    document.querySelector("#hours").textContent = hours;
-    document.querySelector("#minutes").textContent = minutes;
-    document.querySelector("#seconds").textContent = seconds;
+    const daysElement = document.querySelector("#days");
+    const hoursElement = document.querySelector("#hours");
+    const minutesElement = document.querySelector("#minutes");
+    const secondsElement = document.querySelector("#seconds");
+
+    if (daysElement) {
+      daysElement.textContent = days;
+    }
+
+    if (hoursElement) {
+      hoursElement.textContent = hours;
+    }
+
+    if (minutesElement) {
+      minutesElement.textContent = minutes;
+    }
+
+    if (secondsElement) {
+      secondsElement.textContent = seconds;
+    }
 
     document.querySelector("#target-date").textContent =
       targetDate.toLocaleDateString("en-US", {

@@ -3,7 +3,7 @@ import { galleryItems } from "../data/galleryData.js";
 
 export function Gallery() {
 
-  loadCSS("/src/styles/gallery.css");
+  loadCSS("./src/styles/gallery.css");
 
   const cards = galleryItems.map(item => `
     <div class="gallery-card">
