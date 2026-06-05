@@ -9,7 +9,7 @@ export function Letter() {
 }
 
 export async function initLetter() {
-    const response = await fetch("/src/letter/letter.html");
+    const response = await fetch("src/letter/letter.html");
     const html = await response.text();
 
     document.querySelector(".letter-content").innerHTML = html;
